@@ -67,6 +67,8 @@ class KotUtil {
                 grantUriPermission(context, videoIntent, uri)
                 videoIntent.putExtra(MediaStore.EXTRA_OUTPUT, uri)
             }
+                
+            videoIntent.putExtra(MediaStore.EXTRA_VIDEO_QUALITY, 0)
             videoIntent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION)
             return videoIntent
         }
